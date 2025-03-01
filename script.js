@@ -32,6 +32,7 @@ document.getElementById('logo')
 .addEventListener('click', function(){
     window.open('newPage.html', '_blank'); 
 })
+
 // task buttons
 
 

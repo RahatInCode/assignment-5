@@ -1,2 +1,26 @@
-<img src="logo.png" alt="Logo" id="logo" style="cursor: pointer;">
-<h1>My Website</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Dev board</title>
+</head>
+<body>
+    <nav class="flex justify-between ml-36 mr-36 mt-5">
+        <div>
+            <img src="assets/logo.png" alt="">
+        </div>
+        <div>
+           <button class=" bg-[#3752FD] p-5 rounded-xl cursor-pointer" id="backBtn">back</button>
+        </div>
+
+     <script>
+        document.getElementById('backBtn').addEventListener('click', function () {
+            console.log("Back button clicked"); // Debugging
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
