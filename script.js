@@ -27,7 +27,11 @@ document.getElementById("colorChanger").addEventListener("click", function () {
     document.body.style.background = colors[randomIndex];
 document.body.style.backgroundSize = "cover"; 
 });
-
+// taking on a new page when the logo is clicked 
+document.getElementById('logo')
+.addEventListener('click', function(){
+    window.open('newPage.html', '_blank'); 
+})
 // task buttons
 
 
