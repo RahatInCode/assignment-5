@@ -28,4 +28,15 @@ document.getElementById("colorChanger").addEventListener("click", function () {
 document.body.style.backgroundSize = "cover"; 
 });
 
+// task buttons
+
+
+const buttons = document.getElementsByClassName('taskBtn');
+
+for (let button of buttons) {
+    button.addEventListener('click', function () {
+        alert('Board updated successfully!');
+    });
+}
+
 
