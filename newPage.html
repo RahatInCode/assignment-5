@@ -4,18 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Dev board</title>
 </head>
 <body>
     <nav class="flex justify-between ml-36 mr-36 mt-5">
-        <div>
+        <div class="flex gap-2">
             <img src="assets/logo.png" alt="">
+            <h3 class="flex justify-center items-center text-3xl">Dev <span>Board</span></h3>
         </div>
         <div>
-           <button class=" bg-[#3752FD] p-5 rounded-xl cursor-pointer" id="backBtn">back</button>
+           <button class=" bg-[#3752FD] p-5 rounded-xl cursor-pointer text-white" id="backBtn">back to Desk</button>
         </div>
+    </nav>
+<div class="flex justify-center items-center mt-22">
+    <h3>blog</h3>
+</div>
 
+<div class="flex justify-center items-center mt-9">
+    <div class="join join-vertical bg-base-100">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title font-semibold">What are the different ways to select an element in the DOM?</div>
+          <div class="collapse-content text-sm">Use document.createElement("tagName") to create a new HTML element in JavaScript. This method generates an element but does not add it to the page immediately.
+            Adding an Element to the DOM
+To insert the created element into the page, use:
+
+appendChild() – Adds the element at the end of a parent.
+prepend() – Adds the element at the beginning.
+insertBefore() – Inserts before a specific element.
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title font-semibold">What is the difference between innerHTML, innerText, and textContent ?</div>
+          <div class="collapse-content text-sm">innerHTML: Gets or sets HTML content, including tags. Parses and renders HTML.
+            innerText: Gets or sets only visible text, ignoring hidden content and treating HTML as plain text.
+            textContent: Gets or sets all text, including hidden elements, without parsing HTML.</div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title font-semibold">What is event delegation in the DOM?</div>
+          <div class="collapse-content text-sm">Event delegation is a technique in JavaScript where a parent element handles events for its child elements, even if those children are added dynamically. Instead of attaching event listeners to multiple elements, you add a single listener to a common ancestor.</div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title font-semibold">What is event bubbling in the DOM?</div>
+          <div class="collapse-content text-sm">Event bubbling is a process where an event starts from the target element and propagates up through its parent elements in the DOM hierarchy.
+
+            How It Works
+            When an event occurs on an element, it first runs its event handler.
+            Then, the event moves up to its parent, triggering their handlers (if any).
+            This continues until it reaches the root <html> element.</div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title font-semibold"> How do you create, add, and remove elements using JavaScript?</div>
+          <div class="collapse-content text-sm">Use document.createElement("tagName") to create a new element.</div>
+        </div>
+      </div>
+</div>
      <script>
         document.getElementById('backBtn').addEventListener('click', function () {
             console.log("Back button clicked"); // Debugging
