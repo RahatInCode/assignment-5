@@ -61,26 +61,23 @@ document.getElementById("clearLog").addEventListener("click", function() {
 
 // task completing log
 document.addEventListener("DOMContentLoaded", function () {
-    let taskCount = 6; // Initial number of tasks
-    const taskCounter = document.querySelector(".bg-blue-100 + div p.font-bold"); // Task count element
+    let taskCount = 6; 
+    const taskCounter = document.querySelector(".bg-blue-100 + div p.font-bold"); 
     const logContainer = document.getElementById("logContainer");
     const taskButtons = document.querySelectorAll(".taskBtn");
 
-    // Set the initial task count
     taskCounter.textContent = taskCount;
 
     taskButtons.forEach((button) => {
         button.addEventListener("click", function () {
             const cardTitle = this.parentElement.querySelector("h3").textContent;
             
-            // Get current time in HH:MM AM/PM format
             const now = new Date();
-            const hours = now.getHours() % 12 || 12; // Convert to 12-hour format
+            const hours = now.getHours() % 12 || 12; 
             const minutes = now.getMinutes().toString().padStart(2, "0");
             const ampm = now.getHours() >= 12 ? "PM" : "AM";
             const currentTime = `${hours}:${minutes} ${ampm}`;
 
-            // Update log container
             logContainer.innerHTML += `<p> You completed <strong>${cardTitle}</strong> at ${currentTime}.</p>`;
 
             // Mark task as completed
@@ -93,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
             taskCount--;
             taskCounter.textContent = taskCount;
 
-            // Show final alert only when all tasks are completed
+            // Show final alert  when all tasks are completed
             if (taskCount === 0) {
                 setTimeout(() => {
                     alert("🎉 Congratulations! You have completed today's tasks!");
